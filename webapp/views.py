@@ -13,6 +13,8 @@ def createform(request):
    std = Info()
    std.battery= request.GET['battery']
    std.color = request.GET['color']
+   std.runtime = request.GET['runtime']
+
    std.save()
 
    return redirect('/')

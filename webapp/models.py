@@ -3,6 +3,7 @@ from django.db import models
 class Info(models.Model):
    battery = models.CharField(max_length=30)
    color =  models.CharField(max_length=30)
+   runtime = models.CharField(null=True, max_length=30)
 
    created_at = models.DateTimeField(auto_now=True)
 

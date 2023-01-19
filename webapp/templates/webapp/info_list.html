@@ -38,7 +38,8 @@
 
   <link rel="stylesheet" href="{% static 'webapp/bootstrap/bootstrap.min.css' %}" media="screen">
 
-
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
 
 </head>
 
@@ -98,6 +99,10 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
+
+
+    
+    
     <section id="about" class="about">
       <div class="container">
 
@@ -116,9 +121,11 @@
             <div class="card shadow mb-4">
               <div class="card-header py-3">
                 <div class="infoarea">
-                  <h6 class="m-0 font-weight-bold text-primary">Info</h6>
-                  <button type="button" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">정보입력</button>
+                  <h6 class="m-0 font-weight-bold text-primary" id="infoTitle">Info</h6>
+
+                  <a href="" title="Button push blue/green" class="button btnPush btnBlueGreen" data-bs-toggle="modal" data-bs-target="#exampleModal">INPUT</a>
+
+                
                 </div>
               </div>
               <div class="card-body">
@@ -135,18 +142,26 @@
                   <br>
                   <div class="infoBottom">
                     <div class="colInfo">
-                     <div>
-                      <h4 class="small font-weight-bold">COLOR<span class="float-right bat-fig">
+                      <div>
+                        <h4 class="small font-weight-bold">COLOR<span class="float-right bat-fig">
                       </div>
                       <div>
-                          <input class="color_box_input" type="color" value="{{ p.color }}" disabled />
-                        </div>
-                        </span></h4>
-                     
+                        <input class="color_box_input" type="color" value="{{ p.color }}" disabled />
+                      </div>
+                      </span></h4>
+
                     </div>
-                    <div class="exam">
-                      <h4 class="small font-weight-bold">RUN TIME<span class="float-right bat-fig">
-                        </span></h4>
+                    <div class="runInfo">
+                      <div>
+                        <h4 class="small font-weight-bold">RUN TIME<span class="float-right bat-fig">
+                      </div>
+                      <div>
+                        <h3>
+                          {{ p.runtime }}
+                        </h3>
+                      </div>
+
+                      </span></h4>
                     </div>
                     <div class="exam">
                       <h4 class="small font-weight-bold">EXAM<span class="float-right bat-fig">
@@ -859,20 +874,32 @@
   <script src="{% static 'webapp/assets/js/main.js' %}"></script>
 
 
-
-  <!-- Modal -->
-  <div class="modal" id="exampleModal">
-    <div class="modal_body">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
       <form action="{% url 'createform' %}">
         배터리<input type="text" name="battery">
         <br>
         색상<input type="color" name="color">
         <br>
+        경과 시간<input type="text" name="runtime">
         <input type="submit" value="제출">
       </form>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      ...
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
     </div>
   </div>
-  <button class="btn-open-popup">Modal 띄우기</button>
+</div>
+</div>
 
   <div class="card shadow mb-4">
     <div class="card-header py-3">
