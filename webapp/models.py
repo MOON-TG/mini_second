@@ -1,12 +1,16 @@
 from django.db import models
 
-# Create your models here.
-
 class Info(models.Model):
-   battery = models.CharField(max_length=20)
-   color = models.CharField(max_length=20)
+   battery = models.CharField(max_length=30)
+   color =  models.CharField(max_length=30)
+
+   created_at = models.DateTimeField(auto_now=True)
+
+   updated_at = models.DateTimeField(auto_now=True)
 
    def __str__(self):
-      return f'[{self.pk}]{self.battery}{self.color}'
+      return f'[{self.pk}]{self.battery}'
 
-   
+
+
+# Create your models here.
