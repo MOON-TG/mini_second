@@ -13,14 +13,39 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+
+}
+
+.inputButton{
+  margin-top: 12px;
+}
+
+.buttonArea{
+  margin-left: 10%;
   
 }
 
-.py-3{
+.modalForm{
+  display: flex;
+}
+
+#batteryInput{
+  margin-left: 40px;
+}
+
+#runtimeInput{
+  margin-left: 22px;
+}
+
+#colorInput{
+  margin-left: 53px;
+}
+
+.py-3 {
   align-content: center;
 }
 
-#infoTitle{
+#infoTitle {
   font-size: 30px;
 }
 
@@ -79,7 +104,7 @@ a.button {
   line-height: 40px;
   color: #FFF;
   border-radius: 5px;
-  transition: all 0.2s ;
+  transition: all 0.2s;
 }
 
 .btnBlueGreen {
@@ -204,7 +229,7 @@ a.button {
   width: 120px;
   height: 50px;
   border-radius: 5px;
-  transition: all 0.2s ;
+  transition: all 0.2s;
 }
 
 .btnBlueGreen.btnFloat:before {
@@ -233,9 +258,9 @@ a.button {
 .btnFloat:hover:before {
   margin-top: -2px;
   margin-left: 0px;
-  transform: scale(1.1,1.1);
-  -ms-transform: scale(1.1,1.1);
-  -webkit-transform: scale(1.1,1.1);
+  transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
   box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
 }
 
@@ -252,7 +277,7 @@ a.button {
   height: 50px;
   background: #00AE68;
   z-index: 10;
-  transition: all 0.2s ;
+  transition: all 0.2s;
   border-radius: 5px;
 }
 
