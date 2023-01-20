@@ -13,7 +13,17 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+}
 
+#loginButton{
+  text-align: right;
+
+}
+
+.btn-primary{
+  width: 70px;
+  height: 30px;
+ 
 }
 
 .inputButton{
