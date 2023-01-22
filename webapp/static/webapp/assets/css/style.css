@@ -15,15 +15,22 @@ body {
   color: #444444;
 }
 
-#loginButton{
-  text-align: right;
 
+
+#teamOne{
+  justify-content: center;
 }
 
-.btn-primary{
+#teamTwo{
+  justify-content: center;
+}
+
+
+#loginButton{
+  text-align: right;
   width: 70px;
   height: 30px;
- 
+
 }
 
 .inputButton{

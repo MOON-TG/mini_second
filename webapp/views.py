@@ -17,4 +17,4 @@ def createform(request):
 
    std.save()
 
-   return redirect('/')
+   return redirect('http://127.0.0.1:8000#about')
