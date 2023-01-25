@@ -15,7 +15,14 @@ body {
   color: #444444;
 }
 
+
+.align-items-stretch{
+  display: flex;
+  justify-content: center;
+}
+
 #teamOne{
+  display: flex;
   justify-content: center;
 }
 
@@ -1482,6 +1489,8 @@ section {
 .team {
   background: #fff;
   padding: 60px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .team .member {
