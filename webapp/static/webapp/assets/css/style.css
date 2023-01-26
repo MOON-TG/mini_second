@@ -15,6 +15,9 @@ body {
   color: #444444;
 }
 
+.batText{
+  right: 300px;
+}
 
 .align-items-stretch{
   display: flex;
@@ -62,6 +65,11 @@ body {
 #colorInput{
   margin-left: 53px;
 }
+
+#firmVer{
+  margin-left: 35px;
+}
+
 
 .py-3 {
   align-content: center;
@@ -403,13 +411,18 @@ a.button {
   margin: auto 10%;
 }
 
-.exam {
+.firmV {
+  margin: auto 10%;
+}
+
+.runtime_info{
   margin: auto 10%;
 }
 
 .infoBottom {
   display: flex;
   justify-content: center;
+
 }
 
 .infoarea {
