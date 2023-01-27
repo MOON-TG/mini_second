@@ -15,8 +15,14 @@ body {
   color: #444444;
 }
 
+
+
 .batText{
-  right: 300px;
+
+  margin-left:85%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .align-items-stretch{
@@ -76,7 +82,8 @@ body {
 }
 
 #infoTitle {
-  font-size: 30px;
+  font-size: 2px;
+
 }
 
 
@@ -400,28 +407,35 @@ a.button {
   border: none;
 }
 
-.runInfo {
+/* .runInfo {
 
-  margin: auto 10%;
+  margin: auto;
 }
 
-
-.colInfo {
-
-  margin: auto 10%;
+.firmV{
+  margin: auto;
 }
+*/
 
-.firmV {
-  margin: auto 10%;
+
+
+.firmV_info{
+  margin: 14px 0 0 0;
 }
 
 .runtime_info{
-  margin: auto 10%;
+  margin: 14px 0 0 0;
+}
+
+.color_box_input{
+  margin: 14px 0 0 0;
 }
 
 .infoBottom {
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
+  margin-left: 200px;
+  margin-right: 200px;
 
 }
 
@@ -429,6 +443,7 @@ a.button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 30px;
 }
 
 
