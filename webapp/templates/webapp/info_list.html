@@ -114,11 +114,7 @@
   <main id="main">
 
 
-
     <!-- ======= About Section ======= -->
-
-
-
 
 
     <section id="about" class="about">
@@ -169,14 +165,14 @@
                   <br>
                   <div class="infoBottom">
                     <div class="colInfo mb-4">
-                      
-                        <h4 class="small font-weight-bold color_box_fig">LED COLOR<span class="float-right">
-                            <div>
-                              <input class="color_box_input" type="color" value="{{ p.color }}" disabled />
-                            </div>
-                          </span></h4>
-                      </div>
-                    
+
+                      <h4 class="small font-weight-bold color_box_fig">LED COLOR<span class="float-right">
+                          <div>
+                            <input class="color_box_input" type="color" value="{{ p.color }}" disabled />
+                          </div>
+                        </span></h4>
+                    </div>
+
                     <div class="runInfo mb-4">
                       <div>
                         <h4 class="small font-weight-bold runtime_fig">RUN TIME<span class="float-right bat-fig">
@@ -204,7 +200,6 @@
                 </div>
               </div>
             </div>
-
             {% endfor %}
             {% else %}
             <div class="card shadow mb-4">
@@ -281,23 +276,206 @@
 
     </section><!-- End About Section -->
 
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Accordion Item #1
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-          data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            {% include 'webapp/info_review.html' %}
-          </div>
+    <!-- accordion -->
+    <section id="accordian" class="accirdian">
 
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              {% include 'webapp/info_review.html' %}
+            </div>
+
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
+                happening here in terms of content, but just filling up the space to make it look, at least at first
+                glance, a bit more representative of how this would look in a real-world application.</div>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
+      
+
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+    <h3 style="text-align: center; padding-top: 50px;">
+      FAQ
+      <small class="text-muted">with faded secondary text</small>
+    </h3>
+    <button id="btn-all-close">FAQ ALL Close</button>
+    <br>
+    <table class="table table-bordered table-striped table-dark table-hover">
+      <caption>FAQ List of Articles</caption>
+      <thead class="thead-light text-center">
+        <tr>
+          <th>No</th>
+          <th>FAQ Title</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>Hit</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr>
+          <td>1</td>
+          <td class="text-left" width="50%">
+            <div class="panel-faq-container">
+              <p class="panel-faq-title">What is Lorem Ipsum?</p>
+              <div class="panel-faq-answer">
+                <p>Answer (1) ... ↓</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.</p>
+              </div>
+            </div>
+          </td>
+          <td>이용안내</td>
+          <td>2032.01.01</td>
+          <td>84</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="text-left" width="50%">
+            <div class="panel-faq-container">
+              <p class="panel-faq-title">Where does it come from?</p>
+              <div class="panel-faq-answer">
+                <p>Answer (2) ... ↓</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.</p>
+              </div>
+            </div>
+          </td>
+          <td>회원가입</td>
+          <td>2032.02.02</td>
+          <td>114</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="text-left" width="50%">
+            <div class="panel-faq-container">
+              <p class="panel-faq-title">Why do we use it?</p>
+              <div class="panel-faq-answer">
+                <p>Answer (3) ... ↓</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.</p>
+              </div>
+            </div>
+          </td>
+          <td>결제관련</td>
+          <td>2032.03.03</td>
+          <td>98</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="text-left" width="50%">
+            <div class="panel-faq-container">
+              <p class="panel-faq-title">Where can I get some?</p>
+              <div class="panel-faq-answer">
+                <p>Answer (4) ... ↓</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.</p>
+              </div>
+            </div>
+          </td>
+          <td>이용안내</td>
+          <td>2032.04.04</td>
+          <td>43</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="text-left" width="50%">
+            <div class="panel-faq-container">
+              <p class="panel-faq-title">The standard Lorem Ipsum passage, used since the 1500s</p>
+              <div class="panel-faq-answer">
+                <p>Answer (5) ... ↓</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                  laborum.</p>
+              </div>
+            </div>
+          </td>
+          <td>배송관련</td>
+          <td>2032.05.05</td>
+          <td>90</td>
+        </tr>
+        <tr class="bg-info">
+          <td colspan=4 class="text-left">자주 묻는 질문 총 합계</td>
+          <td>429</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+    </section> <!-- End accordion section -->
 
 
 
