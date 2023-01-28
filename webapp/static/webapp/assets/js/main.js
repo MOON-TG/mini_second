@@ -11,6 +11,8 @@ window.onload = () => {
   // panel-faq-answer
   let panelFaqAnswer = document.querySelectorAll(".panel-faq-answer");
 
+  let panelFaqTitle = document.querySelectorAll(".panel-faq-title");
+
   // btn-all-close
   const btnAllClose = document.querySelector("#btn-all-close");
   
@@ -19,6 +21,7 @@ window.onload = () => {
     panelFaqContainer[i].addEventListener('click', function() { // 클릭시 처리할 일
       // FAQ 제목 클릭시 -> 본문이 보이게끔 -> active 클래스 추가
       panelFaqAnswer[i].classList.toggle('active1');
+      panelFaqTitle[i].classList.toggle('click');
     });
   };
   
@@ -26,6 +29,7 @@ window.onload = () => {
     // 버튼 클릭시 처리할 일  
     for(let i=0; i < panelFaqAnswer.length; i++) {
         panelFaqAnswer[i].classList.remove('active1');
+        panelFaqTitle[i].classList.remove('click');
     };
   });
 }

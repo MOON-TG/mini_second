@@ -6,10 +6,10 @@ from django.views.generic import ListView
 
 # Create your views here.
 
+
 class PostList(ListView):
    model = Info
    ordering = '-pk'
-   paginate_by = 1
 
 def createform(request):
    std = Info()
