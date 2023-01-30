@@ -277,56 +277,64 @@
       </div>
 
 
-    </section><!-- End About Section -->
+
+
 
     <!-- accordion -->
     <div class="container">
       <div class="section-title">
         <p>지난 기록들을 확인할 수 있습니다.</p>
       </div>
-    <button id="btn-all-close">ALL Close</button>
-    <br>
-    <table class="table table-bordered table-striped table-hover">
- 
-      <thead class="thead-light text-center">
-     
-          <th id="thText">날짜를 클릭해주세요.</th>
-         
-      </thead>
+      <button id="btn-all-close">ALL Close</button>
+      <br>
+      <table class="table table-bordered table-striped table-hover">
 
-      
-      <tbody class="text-center">
-        {% for s in info_list %}
-        <tr>
-         <td>
-            <div class="panel-faq-container">
-              <p class="panel-faq-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ s.created_at }}</p>
-              </h5> 
-              <div class="panel-faq-answer">
-                 <div>배터리 : {{ s.battery }}%</div>
-                 <div>구동 시간 : {{ s.runtime }}(ms)</div>
+        <thead class="thead-light text-center">
+
+          <th id="thText">날짜를 클릭해주세요.</th>
+
+        </thead>
+
+
+        <tbody class="text-center">
+          {% for s in info_list %}
+          <tr>
+            <td>
+              <div class="panel-faq-container">
+                <p class="panel-faq-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ s.created_at }}</p>
+                </h5>
+                <div class="panel-faq-answer">
+                  <div>배터리 : {{ s.battery }}%</div>
+                  <div>구동 시간 : {{ s.runtime }}(ms)</div>
                   <div>
                     LED : <input class="color_box_inputs" type="color" value="{{ s.color }}" disabled />
                   </div>
-                </p>
-                
+                  </p>
+
+                </div>
               </div>
-            </div>
-          </td>
+            </td>
 
-        </tr>
-        {% endfor %}
-      
-      </tbody>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+
+      </table>
+    </div>
+
+
+
+    <!-- End accordion section -->
+
+
+
+
+
+
+
+    </section><!-- End About Section -->
     
-    </table>
-  </div>
-
-
-
- <!-- End accordion section -->
-
-
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
