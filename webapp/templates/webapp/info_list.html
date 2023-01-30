@@ -142,6 +142,8 @@
                   {% if user.is_authenticated %}
                   <a href="" title="Button push blue/green" class="button btnPush btnBlueGreen" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">INPUT</a>
+                    {% else %}
+                    로그인이 필요합니다.
                   {% endif %}
 
                 </div>
@@ -212,6 +214,9 @@
                   {% if user.is_authenticated %}
                   <a href="" title="Button push blue/green" class="button btnPush btnBlueGreen" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">INPUT</a>
+                  {% else %}
+                  로그인이 필요합니다.
+
                   {% endif %}
 
                 </div>
@@ -277,64 +282,87 @@
       </div>
 
 
+      <div class="container">
+        <div class="accordion" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <div class="dataReviewButton">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                
+              
+                  <h6 class="dataReviewText">DATA REVIEW</h6>
+               
+               
+              </button>
+            </div>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample">
 
-
-
-    <!-- accordion -->
-    <div class="container">
-      <div class="section-title">
-        <p>지난 기록들을 확인할 수 있습니다.</p>
-      </div>
-      <button id="btn-all-close">ALL Close</button>
-      <br>
-      <table class="table table-bordered table-striped table-hover">
-
-        <thead class="thead-light text-center">
-
-          <th id="thText">날짜를 클릭해주세요.</th>
-
-        </thead>
-
-
-        <tbody class="text-center">
-          {% for s in info_list %}
-          <tr>
-            <td>
-              <div class="panel-faq-container">
-                <p class="panel-faq-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ s.created_at }}</p>
-                </h5>
-                <div class="panel-faq-answer">
-                  <div>배터리 : {{ s.battery }}%</div>
-                  <div>구동 시간 : {{ s.runtime }}(ms)</div>
-                  <div>
-                    LED : <input class="color_box_inputs" type="color" value="{{ s.color }}" disabled />
-                  </div>
-                  </p>
-
+              <!-- accordion -->
+              <div class="container">
+                <div class="section-title">
+                  <p>지난 기록들을 확인할 수 있습니다.</p>
                 </div>
+                <button id="btn-all-close">ALL Close</button>
+                <br>
+                <table class="table table-bordered table-striped table-hover">
+
+                  <thead class="thead-light text-center">
+
+                    <th id="thText">날짜를 클릭해주세요.</th>
+
+                  </thead>
+
+
+                  <tbody class="text-center">
+                    {% for s in info_list %}
+                    <tr>
+                      <td>
+                        <div class="panel-faq-container">
+                          <p class="panel-faq-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            {{ s.created_at|date:'Y년 m월 d일 H:i:s' }}</p>
+                          </h5>
+                          <div class="panel-faq-answer">
+                            <div>배터리 : {{ s.battery }}%</div>
+                            <div>구동 시간 : {{ s.runtime }}(ms)</div>
+                            <div>
+                              LED : <input class="color_box_inputs" type="color" value="{{ s.color }}" disabled />
+                            </div>
+                            </p>
+
+                          </div>
+                        </div>
+                      </td>
+
+                    </tr>
+                    {% endfor %}
+
+                  </tbody>
+
+                </table>
               </div>
-            </td>
-
-          </tr>
-          {% endfor %}
-
-        </tbody>
-
-      </table>
-    </div>
 
 
 
-    <!-- End accordion section -->
+              <!-- End accordion section -->
 
 
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
 
 
     </section><!-- End About Section -->
-    
+
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -664,20 +692,6 @@
 
 
 
-  <script src="https://kit.fontawesome.com/49d0ed2e0e.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-    crossorigin="anonymous"></script>
-  <script src="{% static 'blog/js/index.js' %}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-
 
   <script>
     const bat_fig = document.querySelector('.bat-fig').innerText
@@ -749,43 +763,9 @@
     })
   </script>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
-
-  <script>
-    const body = document.querySelector('body');
-    const modal = document.querySelector('.modal');
-    const btnOpenPopup = document.querySelector('.btn-open-popup');
-    const cancel = document.querySelector('.cancel');
-
-    btnOpenPopup.addEventListener('click', () => {
-      modal.classList.toggle('show');
-
-      if (modal.classList.contains('show')) {
-        body.style.overflow = 'hidden';
-      }
-    });
-
-    modal.addEventListener('click', (event) => {
-      //modal.classList.toggle('show');
-
-      if (!modal.classList.contains('show')) {
-        body.style.overflow = 'auto';
-      }
-    });
-
-    cancel.addEventListener('click', () => {
-      modal.classList.toggle('show');
-    });
-  </script>
 
 
 
